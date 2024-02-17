@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 14:47:02 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/16 18:13:01 by tbayrakt         ###   ########.fr       */
+/*   Created: 2024/02/17 12:18:02 by tbayrakt          #+#    #+#             */
+/*   Updated: 2024/02/17 12:27:17 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <ctype.h>
 // #include <stdio.h>
 
-int	ft_isdigit(int arg)
+int	ft_isascii(int c)
 {
-	if (arg > 47 && arg < 58)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
 
 // int	main(void)
 // {
-// 	int isDigit;
-// 	int isDigitOrg;
+// 	int isAscii;
+// 	int isAsciiOrg;
 
-// 	isDigit = ft_isdigit('+');
-// 	isDigitOrg = isdigit('+');
-// 	printf("Is there any digit? %d\n", isDigit);
-// 	printf("Is there any digit? %d\n", isDigitOrg);
+// 	isAscii = ft_isascii(-1);
+// 	isAsciiOrg = isascii(-1);
+// 	printf("Is there any ascii character? %d\n", isAscii);
+// 	printf("Is there any ascii character? %d\n", isAsciiOrg);
 // 	return (0);
 // }
