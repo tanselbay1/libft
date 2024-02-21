@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/17 17:00:02 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/21 14:09:05 by tbayrakt         ###   ########.fr       */
+/*   Created: 2024/02/21 11:34:34 by tbayrakt          #+#    #+#             */
+/*   Updated: 2024/02/21 14:21:24 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-size_t	ft_strlen(char *str)
-{
-	size_t	counter;
+// For testing purposes
+# include <ctype.h>
+# include <stdio.h>
+# include <string.h>
 
-	counter = 0;
-	while (*str != '\0')
-	{
-		counter++;
-		str++;
-	}
-	return (counter);
-}
-// int	main(void)
-// {
-// 	char word[10] = "somethinng";
+// Required headers
+# include <stddef.h>
 
-// 	printf("Length of word is: %zu\n", ft_strlen(word));
-// 	printf("Length of word in original function is: %lu\n", strlen(word));
-// 	return (0);
-// }
+size_t	ft_strlen(char *str);
+int		ft_isprint(int c);
+int		ft_isascii(int c);
+int		ft_isalnum(int arg);
+int		ft_isdigit(int arg);
+int		ft_isalpha(char c);
+
+#endif

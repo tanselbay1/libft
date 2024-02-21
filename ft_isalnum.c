@@ -6,12 +6,11 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 17:35:41 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/16 18:08:16 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/02/21 14:22:49 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include "libft.h"
 
 int	ft_isalnum(int arg)
 {

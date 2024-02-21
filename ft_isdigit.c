@@ -6,12 +6,11 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 14:47:02 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/16 18:13:01 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/02/21 14:22:39 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int arg)
 {

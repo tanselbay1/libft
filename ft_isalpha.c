@@ -6,12 +6,11 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 16:50:18 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/16 14:40:35 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/02/21 14:22:29 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include "libft.h"
 
 int	ft_isalpha(char c)
 {
@@ -22,8 +21,8 @@ int	ft_isalpha(char c)
 
 // int	main(void)
 // {
-// 	int	isAlpha;
-// 	int	isAlphaOrg;
+// 	int isAlpha;
+// 	int isAlphaOrg;
 
 // 	isAlpha = ft_isalpha(97);
 // 	isAlphaOrg = isalpha(97);
