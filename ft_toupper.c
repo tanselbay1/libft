@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/17 17:00:02 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/27 10:46:27 by tbayrakt         ###   ########.fr       */
+/*   Created: 2024/02/27 12:11:10 by tbayrakt          #+#    #+#             */
+/*   Updated: 2024/02/27 13:44:16 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include <ctype.h>
+// #include <stdio.h>
 
-size_t	ft_strlen(char *str)
+int	ft_toupper(int c)
 {
-	size_t	counter;
-
-	counter = 0;
-	while (*str != '\0')
-	{
-		counter++;
-		str++;
-	}
-	return (counter);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
+
 // int	main(void)
 // {
-// 	char word[10] = "somethinng";
-
-// 	printf("Length of word is: %zu\n", ft_strlen(word));
-// 	printf("Length of word in original function is: %lu\n", strlen(word));
+// 	printf("To upper: %c\n", ft_toupper('A'));
+// 	printf("To upper: %c", toupper('A'));
 // 	return (0);
 // }
