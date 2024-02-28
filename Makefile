@@ -6,7 +6,7 @@
 #    By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 16:49:15 by tanselbayra       #+#    #+#              #
-#    Updated: 2024/02/27 17:00:14 by tbayrakt         ###   ########.fr        #
+#    Updated: 2024/02/28 11:39:07 by tbayrakt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ LIB = ranlib
 
 SRCS = ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	ft_isdigit.o ft_isprint.o ft_memset.o ft_strlen.o \
-	ft_toupper.o ft_tolower.o ft_memcpy.o ft_memmove.o
+	ft_toupper.o ft_tolower.o ft_memcpy.o ft_memmove.o \
+	ft_strlcpy.o
 
 OBJS = ${SRCS:.c=.o}
 
