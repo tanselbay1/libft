@@ -6,13 +6,13 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 17:00:02 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/27 10:46:27 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/02/28 15:58:06 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	counter;
 
