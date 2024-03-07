@@ -6,7 +6,7 @@
 #    By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/26 16:49:15 by tanselbayra       #+#    #+#              #
-#    Updated: 2024/03/07 10:24:33 by tbayrakt         ###   ########.fr        #
+#    Updated: 2024/03/07 11:45:30 by tbayrakt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRCS = ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	ft_strncmp.o ft_strnstr.o ft_memchr.o ft_memcmp.o \
 	ft_atoi.o ft_calloc.o ft_strdup.o ft_substr.o \
 	ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o \
-	ft_strmapi.o
+	ft_strmapi.o ft_striteri.o
 
 OBJS = ${SRCS:.c=.o}
 
