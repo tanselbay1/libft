@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 11:34:34 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/03/07 11:45:12 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:00:05 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <limits.h>
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 size_t	ft_strlen(const char *str);
 int		ft_isprint(int c);
@@ -54,5 +55,6 @@ char	**ft_split(const char *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
 
 #endif
