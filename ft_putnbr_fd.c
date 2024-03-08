@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:39:35 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/03/07 14:57:17 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/08 11:06:48 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + '0', fd);
 }
+
 // Line: 19 If the number is negative
 // Line: 22 Recursively call putnbr with the absolute val of n
 // Line: 27 Recursively call putnbr with the quotient of n divided by 10

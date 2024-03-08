@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 09:48:20 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/03/06 15:43:19 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/08 11:17:55 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	safe_malloc(char **token_v, int position, size_t buffer)
 	if (token_v[position] == NULL)
 	{
 		while (i < position)
-			free(token_v[i++]); // Free token also i++
+			free(token_v[i++]);
 		free(token_v);
 		return (1);
 	}
@@ -39,10 +39,8 @@ int	fill(char **token_v, char const *s, char delimeter)
 	while (*s)
 	{
 		len = 0;
-		// Skip delimeters
 		while (*s == delimeter && *s)
 			s++;
-		// Calc the len of token moving the ptr in the overall s
 		while (*s != delimeter && *s)
 		{
 			len++;
@@ -85,8 +83,8 @@ int	count_tokens(const char *s, char delimeter)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t tokens;
-	char **token_v; // argv
+	size_t	tokens;
+	char	**token_v;
 
 	if (!s)
 		return (NULL);
@@ -95,11 +93,15 @@ char	**ft_split(char const *s, char c)
 	token_v = malloc((tokens + 1) * sizeof(char *));
 	if (token_v == NULL)
 		return (NULL);
-	// Null pointer array
 	token_v[tokens] = NULL;
-
-	// Copy all the strings in the correct position
 	if (fill(token_v, s, c))
 		return (NULL);
 	return (token_v);
 }
+
+// Line: 25 - Free token also i++
+// Line: 42 - Skip delimeters
+// Line: 44 - Calc the len of token moving the ptr in the overall s
+// Line: 88 - argv
+// Line: 96 - Null pointer array
+// Line: 97 - Copy all the strings in the correct position

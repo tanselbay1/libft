@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:27:25 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/03/05 15:55:06 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/08 11:20:47 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,21 @@ char	*ft_strtrim(const char *s1, const char *set)
 
 	start = 0;
 	end = ft_strlen(s1);
-	// Find the start of the str without set characters
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	// Find the end of the str without set characters
 	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	len = end - start + 1;
-	// Allocate memory for the trimmed str
 	trimmed = (char *)malloc((len) * sizeof(char));
 	if (trimmed == NULL)
 		return (NULL);
 	ft_strlcpy(trimmed, s1 + start, len);
 	return (trimmed);
 }
+// Line 24: Find the start of the str without set characters
+// Line 26: Find the end of the str without set characters
+// Line 29: Allocate memory for the trimmed str
+
 // #include <stdio.h>
 // #include <stdlib.h>
 
