@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:08:50 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/28 17:38:25 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/09 08:52:59 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ char	*ft_strchr(const char *s, int c)
 	char	chrc;
 
 	chrc = (char)c;
-	// Loop through to find matching
 	while (*s)
 	{
 		if (*s == chrc)
 			return ((char *)s);
 		s++;
 	}
-	// No match found and check if it is null terminator
-	// If so return the null teminator
 	if (chrc == '\0')
 		return ((char *)s);
-	// After loop check if the c is NULL
 	return (NULL);
 }
+// Line 22: Loop through to find matching
+// Line 28: No match found and check if it is null terminator
+// If so return the null teminator
+// Line 30: After loop check if the c is NULL
 
 // int	main(void)
 // {

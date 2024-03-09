@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 14:10:32 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/29 14:43:32 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/09 08:59:53 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	const char	*big_ptr = big;
 	const char	*little_ptr = little;
 
-	// Initialize pointers for comparison | above
-	// If little is empty return big
 	if (*little == '\0')
 		return ((char *)big);
-	// Calculate the length of the little
 	little_len = 0;
 	while (little[little_len] != '\0')
 		little_len++;
-	// If big length is smaller than little length, no match
 	if (len < little_len)
 		return (NULL);
-	// Search for the little in big
 	while (*big_ptr != '\0' && len >= little_len)
 	{
 		if (*big_ptr == *little_ptr && ft_strncmp(big_ptr, little_ptr,
@@ -40,6 +35,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+// Line 18-19: Initialize pointers for comparison
+// Line 21: If little is empty return big
+// Line 23: Calculate the length of the little
+// Line 26: If big length is smaller than little length, no match
+// Line 28: Search for the little in big
+
 // #include <stdio.h>
 // #include <string.h>
 

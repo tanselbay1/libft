@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:47:20 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/29 11:24:52 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/09 09:15:09 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,21 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	chrc;
-	int		backCounter;
+	int		back_counter;
 
 	chrc = (char)c;
-	// Find the length of string to loop back
-	backCounter = ft_strlen(s);
-	// Loop through to find matching
-	while (backCounter >= 0)
+	back_counter = ft_strlen(s);
+	while (back_counter >= 0)
 	{
-		if (s[backCounter] == chrc)
-			return ((char *)s + backCounter);
-		backCounter--;
+		if (s[back_counter] == chrc)
+			return ((char *)s + back_counter);
+		back_counter--;
 	}
 	return (NULL);
 }
+
+// Line 24: Find the length of string to loop back
+// Line 25: Loop through to find matching
 
 // int	main(void)
 // {

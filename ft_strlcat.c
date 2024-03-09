@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 14:16:01 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/28 16:10:33 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/09 08:47:53 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,25 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
-	// This is essentially a check to ensure that 'dst' doesn't overflow
 	if (dst_len >= size)
 		dst_len = size;
-	// It means dst is full so return size + stc_len
 	if (dst_len == size)
 		return (size + src_len);
-	// If there's enought space in 'dst' it concatenates
 	if (src_len < size - dst_len)
 		ft_memcpy(dst + dst_len, src, src_len + 1);
-	// If not, copy as much as dst has space
 	else
 	{
 		ft_memcpy(dst + dst_len, src, size - dst_len - 1);
 		dst[size - 1] = '\0';
 	}
-	// Return the original length of src + dst
 	return (dst_len + src_len);
 }
+// Line 22: This is essentially a check to ensure that 'dst' doesn't overflow
+// Line 24: It means dst is full so return size + stc_len
+// Line 26: If there's enought space in 'dst' it concatenates
+// Line 28: If not, copy as much as dst has space
+// Line 33: Return the original length of src + dst
+
 // int	main(void)
 // {
 // 	char dest[10] = "Hello";

@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 09:15:14 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/28 12:18:22 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/09 08:42:45 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
-	// Initialize a variable 'i' to keep track
-	// of the current position in the source string.
 	i = 0;
-	// Check if the size of the destination buffer is
-	// greater than zero to avoid undefined behavior.
 	if (size > 0)
 	{
 		while (src[i] != '\0' && i < size - 1)
@@ -33,11 +29,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 		dst[i] = '\0';
 	}
-	// Count the length of the source string to return
 	while (src[i] != '\0')
 		i++;
 	return (i);
 }
+// Line 22: Initialize a variable 'i' to keep track
+// of the current position in the source string.
+// Line 23: Check if the size of the destination buffer is
+// greater than zero to avoid undefined behavior.
+// Line 32: Count the length of the source string to return
 
 // int	main(void)
 // {
