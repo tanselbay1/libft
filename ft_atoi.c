@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 10:21:15 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/03/01 10:54:52 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/09 09:45:05 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 int	ft_atoi(const char *str)
 {
-	int result, i, sign;
+	int	result;
+	int	i;
+	int	sign;
+
 	result = 0;
 	sign = 1;
 	i = 0;
-	// Skip leading whitespace
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
 		|| str[i] == '\v' || str[i] == '\f')
 		i++;
-	// Check for sign
 	if (str[i] == '-')
 	{
 		sign = -1;
@@ -30,19 +31,20 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-	// Convert digit to integer
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	// Ensure returning correct sign, if sign is minus (* -1 make it negative n)
 	return (sign * result);
 }
-// #include <stdio.h>
+// Line 24: Skip leading whitespace
+// Line 27: Check for sign
+// Line 29: Ensure returning correct sign, if sign is minus (*
+// -1 make it negative n)
+// Line 34: Convert digit to integer
 
-// // Function prototype
-// int		ft_atoi(const char *str);
+// #include <stdio.h>
 
 // // Test function
 // void	test_ft_atoi(const char *str)
