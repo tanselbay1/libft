@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 14:10:32 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/03/09 08:59:53 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/09 11:31:56 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	little_len = 0;
 	while (little[little_len] != '\0')
 		little_len++;
-	if (len < little_len)
-		return (NULL);
 	while (*big_ptr != '\0' && len >= little_len)
 	{
 		if (*big_ptr == *little_ptr && ft_strncmp(big_ptr, little_ptr,
@@ -37,15 +35,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 }
 // Line 18-19: Initialize pointers for comparison
 // Line 21: If little is empty return big
-// Line 23: Calculate the length of the little
-// Line 26: If big length is smaller than little length, no match
-// Line 28: Search for the little in big
+// Line 24: Calculate the length of the little
+// Line 26: Traverse through 'big' string until either the end of 'big'
+// string or len becomes less than 'little' string length
+// Line 28: If current character in 'big' matches
+// the first character of 'little' and the subsequent
+// characters in 'big' match the subsequent characters in 'little'
+// Line 29: Return the pointer to the beginning of the match in 'big'
+// Line 34: Return NULL if no match
 
 // #include <stdio.h>
 // #include <string.h>
-
-// // Prototype of ft_strnstr function
-// char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 // int	main(void)
 // {
