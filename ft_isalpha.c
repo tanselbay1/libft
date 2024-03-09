@@ -6,13 +6,13 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 16:50:18 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/02/21 14:22:29 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/03/09 10:06:00 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c > 64 && c < 91) || (c > 96 && c < 123))
 		return (1);
